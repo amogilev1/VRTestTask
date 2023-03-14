@@ -1,6 +1,7 @@
 # VR Test task
 
-Created on UE 4.27, Tested on Oculus Quest 2
+Created on UE 4.27, Tested on Oculus Quest 2 via SteamVR
+Andoird apk built successfully but not tested
 
 ## Controls
 
