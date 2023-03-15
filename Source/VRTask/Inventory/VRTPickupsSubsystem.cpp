@@ -20,12 +20,18 @@ void UVRTPickupsSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 		UE_LOG(LogPickupSubsystem, Error, TEXT("UVRTPickupsSubsystem initialization failed!"));
 	}
 
+	bInitialized = true;
 	UE_LOG(LogPickupSubsystem, Display, TEXT("UVRTPickupsSubsystem initialized"));
 	LogPickups();
 }
 
 bool UVRTPickupsSubsystem::FindPickupById(const FName& PickupId, FPickupGameData& OutPickupGameData) const
 {
+	if (!bInitialized)
+	{
+		return false;
+	}
+	
 	const FPickupGameData* PickupGameData = PickupsGameData.Find(PickupId);
 
 	if (!PickupGameData)

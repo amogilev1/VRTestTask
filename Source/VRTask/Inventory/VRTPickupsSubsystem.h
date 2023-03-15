@@ -29,4 +29,5 @@ private:
 	
 	bool CollectPickupsDataFromDataTable(const UDataTable* InDataTable);
 	void LogPickups() const;
+	bool bInitialized;
 };
