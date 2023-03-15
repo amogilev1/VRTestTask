@@ -18,6 +18,7 @@ void UVRTPickupsSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 	if (!CollectPickupsDataFromDataTable(LoadObject<UDataTable>(nullptr, *Settings->SourceDataTable)))
 	{
 		UE_LOG(LogPickupSubsystem, Error, TEXT("UVRTPickupsSubsystem initialization failed!"));
+		return;
 	}
 
 	bInitialized = true;
